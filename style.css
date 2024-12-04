@@ -88,10 +88,22 @@ body {
 h1.notion-heading strong,
 strong h1.notion-heading {
   margin-bottom: 12px !important;
-  letter-spacing: -4px !important;
+  letter-spacing: -2px !important; /* ZMIENIONE z -4px */
   line-height: 1 !important;
-  font-size: clamp(2.6rem, 6vw, 5rem) !important;
+  font-size: clamp(2.6rem, 6vw, 3rem) !important; /* ZMIEONE wczesniej max rozmiar h1 byl 5 rem */
 }
+
+
+h1:first-of-type {
+    font-size: 7rem !important; /* potem zmienic na 2.5rem? */
+}
+/* DODANE ZMIENIONE SPRAWDZIC */
+
+
+/* div.kontener h1 {
+    font-size: 7rem;
+} */
+
 
 h1.notion-heading {
   letter-spacing: -1px!important;
@@ -175,13 +187,25 @@ h3.notion-heading * {
 
 /* SMALL */
 .notion-collection-gallery.small {
-  grid-template-columns: 1fr 1fr 1fr!important;
+  grid-template-columns: 1.5fr 1.5fr !important; /* ZMIENIONE */
+  gap: 12px !important; /*DODANE zeby odleglosci miedzy cards byly wieksze */
 }
 
-@media all and (max-width: 764px) { 
+.notion-collection-card {
+    border-radius: 12px !important;
+}
+
+/* ZMIENIONE z 754px */
+@media all and (max-width: 1100px) { 
   .notion-collection-gallery.small {
-    grid-template-columns: 1fr!important;
+    grid-template-columns: 3fr !important; /*ZMIENIONE */
   }
+}
+
+.notion-collection-card .notion-property__title {
+    line-height: 1.3 !important; /* ZMIENIONE */
+    font-size: 1.1rem !important; /* ZMIENIONE */
+    opacity: 0.95 !important; /* DODANE */
 }
 
 /* MEDIUM */
@@ -190,7 +214,7 @@ h3.notion-heading * {
 }
 
 .notion-collection-gallery.medium .notion-collection-card {
-  min-height: 420px!important;
+  min-height: 320px!important;
 }
 
 @media all and (max-width: 1200px) { 
@@ -291,14 +315,22 @@ h3.notion-heading * {
 .notion-collection-card {
   display: flex !important;
   flex-direction: column !important;
-  box-shadow: none !important;
-  border: 1px solid var(--color-border-default) !important;
+  /* box-shadow: none !important; */ /*ZMIENIONE */
+  box-shadow: 4px 4px 16px 0px rgba(240, 240, 240, 1) !important; /*DODANE */
+  border: 1px solid #e5e5e5 !important; /* border: 1px solid var(--color-border-default) !important; */ /*ZMIENIONE */
   position: relative !important;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0)
 }
+
+.notion-collection-card:hover {
+    box-shadow: 4px 4px 16px 0px rgb(207, 0, 0) !important; /*DODANE */
+    border: 1px solid #b6b6b6 !important; /* DODANE */
+}
+
+
 
 .notion-collection-card__cover {
   height: 100% !important;
@@ -317,11 +349,29 @@ h3.notion-heading * {
 
 /* CONTENT VISIBLE ARROW ON HOVER */
 .notion-collection-card__content {
-  position: absolute !important;
+  position: static !important; /*ZMIENIONE z absolute ale mogloby byc bez moze */
   bottom: 0 !important;
-  color: var(--color-bg-default) !important;
-  background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  /* color: var(--color-bg-default) !important; */ /*ZMIENIONE */
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%); */ /*ZMIENIONE */
   width: 100% !important;
+  padding: 1.4rem !important; /* ZMIENIONE */
+  border-top: 1px solid #e5e5e5 !important; /* ZMIENIONE */
+}
+
+/* DODANE aby w kontenerach projektow w home, firma i pills, jako 2 i 3 element container byly obok siebie zamiast pod soba */
+.notion-collection-card__property-list .notion-property__select:nth-child(2),
+.notion-collection-card__property-list .notion-property__select:nth-child(3) {
+    display: inline-flex; 
+    gap: 20px;           
+    width: auto;         
+}
+
+.notion-collection-card__content:hover {
+    background: #ffffff; /* DODANE */
+}
+
+.notion-collection-card__content:hover .notion-collection-card__property-list:hover {
+    background:#9cae34; /* DODANE */
 }
 
 .notion-collection-card:hover .notion-property__title::after {
@@ -387,13 +437,33 @@ h3.notion-heading * {
   letter-spacing: 1px !important;
   font-weight: 500 !important;
   padding: 1px 7px 0px 7px !important;
-  border-radius: 50px !important;
+  border-radius: 6px !important; /* ZMIENIONE z 50px */
 }
 
 .notion-pill.pill-gray {
   background: var(--color-bg-default) !important;
   border: 1px solid var(--color-border-default);
 }
+
+.notion-callout {
+    padding: 1rem !important; /* ZMIENIONE */
+    border-radius: 12px !important; /*ZMIENIONE */
+}
+
+.notion-callout__icon {
+    top:3px !important; /* ZMIENIONE */
+    width: auto !important; /* ZMIENIONE */
+}
+
+.notion-semantic-string .link {
+    text-decoration: none !important; /* ZMIENIONE */
+}
+
+.notion-link link {
+    border-radius: 12px !important;
+}
+
+
 
 /* LIST */
 .notion-collection-list__item:first-child {
@@ -432,7 +502,7 @@ h3.notion-heading * {
 .notion-collection-card__property-list {
   display: flex !important;
   flex-direction: column !important;
-  gap: 8px !important
+  gap: 8px !important; /*ZMIENIONE */
 }
 
 .notion-property__date .date {
