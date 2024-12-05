@@ -308,13 +308,18 @@ notion-collection-card gallery
   grid-template-rows: auto !important;
 }
 
+.notion-collection-card__content .notion-collection-card__property-list {
+  z-index: 1 !important; /*ZMIANA*/
+  background: white !important; /*ZMIANA*/
+}
+
 .notion-collection-card__cover img {
   padding: 0 !important;
   height: 100%!important;
   transition: transform 0.5s ease-in-out; /*ZMIANA SPR*/
 }
 
-.notion-collection-card:hover .notion-collection-card__cover {
+.notion-collection-card:hover .notion-collection-card__cover img {
   transform: scale(1.1); /*ZMIANA aby byl zoom in przy hover card*/
 }
 
