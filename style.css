@@ -311,6 +311,11 @@ notion-collection-card gallery
 .notion-collection-card__cover img {
   padding: 0 !important;
   height: 100%!important;
+  transition: transform 0.5s ease-in-out; /*ZMIANA SPR*/
+}
+
+.notion-collection-card:hover .notion-collection-card__cover {
+  transform: scale(1.1); /*ZMIANA aby byl zoom in przy hover card*/
 }
 
 .notion-collection-card__cover div {
