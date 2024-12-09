@@ -39,21 +39,7 @@ h1, h2, h3 {
 
 /* OPTIONS */
 
-/*tylko dla strony z konkretnym tytulem*/
-#page-index .notion-header {
-  /* display: none !important; */ /*ZMIANA*/
-}
-
-/*SPR*/
-body.site-anna-cybulska .notion-header__cover {
-  display: none !important;
-}
-
-/*SPR delete after*/
-body.site-anna-cybulska h2 {
-  color: purple !important;
-}
-
+/*ZMIENIC!! tylko dla strony z konkretnym tytulem*/
 .notion-header__content {
   display: none !important; /*ZMIANA*/
 }
@@ -966,51 +952,4 @@ notion-collection-card gallery
   padding-left: 24px !important;
   letter-spacing: -.3px !important;
   border-color: var(--color-border-default) !important;
-}
-
-
-
-/*NEW*/
-/* Styl dla kontenera, który obejmuje h2 i h1, i ustawia tło na całą szerokość strony */
-article > div {
-  position: relative; /* Pozwala na zastosowanie tła */
-  width: 100vw; /* Szerokość równa szerokości widoku */
-  left: 0; /* Ustawia kontener do lewej strony */
-  margin: 0; /* Usuwa marginesy */
-  padding: 0;
-}
-
-/* Styl dla h2 i h1 */
-article h2, article h1 {
-  background-image: url('URL_DO_OBRAZKA'); /* Podaj URL obrazka */
-  background-size: cover; /* Obrazek pokrywa całą szerokość i wysokość */
-  background-position: center; /* Obrazek jest wycentrowany */
-  background-repeat: no-repeat; /* Obrazek się nie powtarza */
-  margin: 0; /* Usuwamy marginesy, by tło było rozciągnięte na całą szerokość */
-  padding: 20px; /* Odstęp wewnętrzny w celu zachowania przestrzeni wokół tekstu */
-  width: 100%; /* Pełna szerokość */
-  box-sizing: border-box; /* Uwzględnia padding w szerokości */
-  position: relative; /* Umożliwia dodanie tła */
-}
-
-/* Styl dla samego article */
-article {
-  max-width: var(--layout-max-width); /* Ustawienie maksymalnej szerokości dla article */
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 20px; /* Opcjonalne paddingi, by zachować odstęp od krawędzi */
-}
-
-/* Styl dla h2 i h1, żeby pozostały wyrównane do lewej strony */
-article h2, article h1 {
-  text-align: left; /* Ustawienie tekstu do lewej */
-  width: 100%; /* Ustawienie szerokości na 100%, by pasowało do szerokości pozostałych elementów */
-}
-
-/* Styl dla kontenera w którym znajdują się inne elementy */
-article > div {
-  display: block; /* Wyświetla jako blok, obejmując cały dostępny obszar */
-  width: 100vw; /* Cała szerokość ekranu */
-  padding-left: var(--layout-margin-left); /* Ustawienie marginesu lewego, który pasuje do pozostałych elementów w article */
-  padding-right: var(--layout-margin-right); /* Opcjonalne */
 }
