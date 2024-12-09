@@ -996,45 +996,42 @@ notion-collection-card gallery
 
 /*NEW cover image is the same height as h2&h1 in article, article goes to top so that h2&h1 is in a center of cover image */
 
-/* 1. Ensure the image covers the full parent dimensions */
+/* 1. Ustawienie obrazka, aby wypełniał rodzica */
 .notion-header__cover img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
+  width: 100%;      /* Dopasowanie szerokości */
+  height: 100%;     /* Dopasowanie wysokości */
+  object-fit: cover; /* Wypełnia całą przestrzeń */
+  position: absolute; /* Umożliwia nakładanie się na inne elementy */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Obrazek będzie w tle */
 }
 
-/* 2. Make the .notion-header__cover height dynamic based on h1 and h2 */
+/* 2. Ustawienia dla nagłówków, które będą wyświetlane nad obrazkiem */
+.notion-header {
+  position: relative; /* Umożliwia wyświetlanie nad obrazkiem */
+  z-index: 1; /* Nagłówki muszą być nad obrazkiem */
+}
+
 .notion-header__cover {
-  position: relative !important; /* Allow stacking of content */
-  display: flex !important; /* Align inner content properly */
-  align-items: center !important;
-  justify-content: center !important;
-  height: auto !important; /* Default height to adjust dynamically */
-  min-height: calc(var(--h1-height, 0px) + var(--h2-height, 0px) + 80px) !important;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Wysokość obrazka zostanie ustawiona przez JS */
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-/* 3. Position h1 and h2 absolutely above the image */
-article h1, article h2 {
-  margin: 0 !important;
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important; /* Center the elements */
-  z-index: 1 !important; /* Ensure they appear above the image */
-  text-align: center !important;
+.notion-text {
+  min-height: 2rem;
 }
 
-/* 4. Ensure other article elements stay below the header */
-article > :not(h1):not(h2) {
-  position: relative !important;
-  margin-top: calc(var(--h1-height, 0px) + var(--h2-height, 0px) + 80px) !important; /* Match header height */
-  z-index: 0 !important;
+/* 3. Wyrównanie nagłówków w pionie i poziomie */
+.notion-header h1, .notion-header h2 {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Wyśrodkowanie w pionie */
+  z-index: 2; /* Nagłówki nad obrazkiem */
 }
-
-/* 5. Calculate heights dynamically */
-:root {
-  --h1-height: 0px;
-  --h2-height: 0px;
-}
-
-/* Use JavaScript for dynamic height calculation */
