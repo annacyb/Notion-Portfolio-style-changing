@@ -22,3 +22,17 @@ window.addEventListener('load', adjustImageHeight);
 
 // Adjust the height when resizing the window
 window.addEventListener('resize', adjustImageHeight);
+
+// Funkcja, która sprawdza, czy plik JS jest załadowany
+(function() {
+    // Sprawdzamy, czy plik JS jest załadowany przez sprawdzenie istnienia zmiennej
+    if (typeof myScript === 'undefined') {
+      console.log('Plik JavaScript NIE jest załadowany.');
+    } else {
+      console.log('Plik JavaScript jest załadowany.');
+    }
+  })();
+  
+  // Przykładowa zmienna, która może być zdefiniowana w twoim pliku JS
+  var myScript = 'This is my JS file';
+  
