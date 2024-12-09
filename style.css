@@ -77,9 +77,9 @@ article > h2:first-of-type::before {
   /* /* display: none !important; */
 }
 
-/* .notion-header__content {
+.notion-header__content {
   display: none !important;
-  } /*CHANGED*/
+  }
 
 .theme-dark .notion-code code {
   color: var(--color-text-default) !important;
@@ -151,6 +151,7 @@ h1.notion-heading:first-of-type {
 }
 
 h2.notion-heading:not(.toggle) {
+  margin-top: 0 !important; /*CHANGED*/
   margin-bottom: 12px !important;
 }
 
@@ -989,4 +990,56 @@ notion-collection-card gallery
   padding-left: 24px !important;
   letter-spacing: -.3px !important;
   border-color: var(--color-border-default) !important;
+}
+
+
+
+/*NEW cover image is the same height as h2&h1 in article, article goes to top so that h2&h1 is in a center of cover image */
+
+/* 1. Ustawienie img, aby dopasowywał się do 100% szerokości i wysokości rodzica */
+.notion-header__cover img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* 2. Dynamiczne dopasowanie wysokości obrazu do wysokości h2 i h1 */
+.notion-header {
+  position: relative !important; /* Ustawienie relatywnego kontekstu dla absolutnych elementów */
+}
+
+.notion-header__cover {
+  height: auto !important; /* Wstępne ustawienie na auto */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Pseudo-element na utrzymanie dynamicznej wysokości */
+.notion-header__cover::before {
+  content: '' !important;
+  display: block !important;
+  height: calc((var(--h1-height, 0px) + var(--h2-height, 0px)) + 80px) !important; /* Padding 40px top i bottom */
+}
+
+/* 3. Centrowanie pierwszego h2 i h1 na środku obrazu */
+article {
+  position: relative !important;
+}
+
+article h1, article h2 {
+  margin: 0 !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important; /* Centrowanie h1 i h2 */
+  text-align: center !important;
+  z-index: 1 !important; /* Zapewnienie, że h1 i h2 będą nad obrazem */
+}
+
+/* Ustawienie pozostałych elementów article pod spodem h1 i h2 */
+article > :not(h1):not(h2) {
+  position: relative !important;
+  z-index: 0 !important; /* Zapewnienie, że elementy pozostaną pod h1 i h2 */
+  margin-top: calc((var(--h1-height, 0px) + var(--h2-height, 0px)) + 80px) !important; /* Padding 40px top i bottom */
 }
