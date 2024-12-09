@@ -1,18 +1,15 @@
-// Funkcja do obliczenia wysokości obrazka na podstawie nagłówków
+// Function to adjust the image height based on h1 and h2 heights
 function adjustImageHeight() {
-    // Pobranie pierwszych nagłówków h1 i h2 w artykule
     const h1 = document.querySelector('article h1');
     const h2 = document.querySelector('article h2');
-    
-    // Jeśli nagłówki istnieją, obliczamy ich wysokość
+
     if (h1 && h2) {
         const h1Height = h1.offsetHeight;
         const h2Height = h2.offsetHeight;
-        
-        // Ustawienie wysokości obrazka na wysokość obu nagłówków plus padding
-        const imageHeight = h1Height + h2Height + 80; // 40px padding top + 40px padding bottom
 
-        // Ustawienie wysokości obrazka
+        // Set the image height dynamically (h1 + h2 heights + 40px padding top & bottom)
+        const imageHeight = h1Height + h2Height + 80;
+
         const image = document.querySelector('.notion-header__cover img');
         if (image) {
             image.style.height = `${imageHeight}px`;
@@ -20,8 +17,8 @@ function adjustImageHeight() {
     }
 }
 
-// Wywołanie funkcji na załadowanie strony
+// Call adjustImageHeight when the page loads
 window.addEventListener('load', adjustImageHeight);
 
-// Ponowne wywołanie funkcji przy zmianie rozmiaru okna
+// Adjust the height when resizing the window
 window.addEventListener('resize', adjustImageHeight);

@@ -960,21 +960,21 @@ notion-collection-card gallery
 
 /*NEW cover image is the same height as h2&h1 in article, article goes to top so that h2&h1 is in a center of cover image */
 
-/* 1. Ustawienie obrazka, aby wypełniał rodzica i miał pełną responsywność */
+/* Make sure the image fits the container */
 .notion-header__cover img {
-  width: 100% !important;    /* Nadpisuje szerokość */
-  height: 100% !important;   /* Nadpisuje wysokość */
-  object-fit: cover !important; /* Zapewnia dopasowanie do rozmiaru kontenera */
-  position: absolute !important; /* Pozwoli na nakładanie się na inne elementy */
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  position: absolute !important;
   top: 0 !important;
   left: 0 !important;
-  z-index: -1 !important; /* Obrazek będzie w tle */
+  z-index: -1 !important;
 }
 
-/* 2. Ustawienia dla nagłówków, które będą wyświetlane nad obrazkiem */
+/* Adjust header positioning */
 .notion-header {
-  position: relative !important; /* Umożliwia wyświetlanie nad obrazkiem */
-  z-index: 1 !important; /* Nagłówki muszą być nad obrazkiem */
+  position: relative !important;
+  z-index: 1 !important;
 }
 
 .notion-header__cover {
@@ -982,20 +982,15 @@ notion-collection-card gallery
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  height: auto !important; /* Wysokość obrazka zostanie ustawiona przez JS */
   padding-top: 40px !important;
   padding-bottom: 40px !important;
 }
 
-.notion-text {
-  min-height: 2rem !important;
-}
-
-/* 3. Wyrównanie nagłówków w pionie i poziomie */
+/* Make sure h1 and h2 stay on top of the image */
 .notion-header h1, .notion-header h2 {
   text-align: center !important;
   position: absolute !important;
   top: 50% !important;
-  transform: translateY(-50%) !important; /* Wyśrodkowanie w pionie */
-  z-index: 2 !important; /* Nagłówki nad obrazkiem */
+  transform: translateY(-50%) !important;
+  z-index: 2 !important;
 }
