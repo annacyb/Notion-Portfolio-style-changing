@@ -39,8 +39,19 @@ h1, h2, h3 {
 
 /* OPTIONS */
 
+/*tylko dla strony z konkretnym tytulem*/
 #page-index .notion-header {
   /* display: none !important; */ /*ZMIANA*/
+}
+
+/*SPR*/
+body.site-anna-cybulska .notion-header__cover {
+  display: none !important;
+}
+
+/*SPR delete after*/
+body.site-anna-cybulska h2 {
+  color: purple !important;
 }
 
 .notion-header__content {
@@ -960,36 +971,46 @@ notion-collection-card gallery
 
 
 /*NEW*/
-article h2, article h1 {
-  background-image: url('https://annacyb.github.io/portfolio-template-change/images/test1.jpg'); /* Zastąp tym adresem URL swojego obrazka */
-  background-size: cover; /* Obrazek będzie rozciągnięty na całą szerokość i wysokość */
-  background-position: center; /* Obrazek będzie wycentrowany */
-  background-repeat: no-repeat; /* Obrazek nie będzie powtarzany */
-  position: relative; /* Potrzebne, żeby ustawić tło w kontekście tych elementów */
-  margin-left: auto; /* Wyśrodkowanie elementów w obrębie article */
-  margin-right: auto;
-  width: 100%; /* Pełna szerokość dostępnego miejsca */
-  box-sizing: border-box; /* Uwzględnia marginesy i padding w szerokości elementu */
+/* Styl dla kontenera, który obejmuje h2 i h1, i ustawia tło na całą szerokość strony */
+article > div {
+  position: relative; /* Pozwala na zastosowanie tła */
+  width: 100vw; /* Szerokość równa szerokości widoku */
+  left: 0; /* Ustawia kontener do lewej strony */
+  margin: 0; /* Usuwa marginesy */
+  padding: 0;
 }
 
-/* Ustawienia specyficzne dla h1 i h2 */
+/* Styl dla h2 i h1 */
 article h2, article h1 {
-  padding: 20px; /* Opcjonalne, dodaje odstęp wewnętrzny */
-  text-align: center; /* Wyśrodkowanie tekstu */
-  display: block; /* Wymusza blokowy sposób wyświetlania */
+  background-image: url('URL_DO_OBRAZKA'); /* Podaj URL obrazka */
+  background-size: cover; /* Obrazek pokrywa całą szerokość i wysokość */
+  background-position: center; /* Obrazek jest wycentrowany */
+  background-repeat: no-repeat; /* Obrazek się nie powtarza */
+  margin: 0; /* Usuwamy marginesy, by tło było rozciągnięte na całą szerokość */
+  padding: 20px; /* Odstęp wewnętrzny w celu zachowania przestrzeni wokół tekstu */
+  width: 100%; /* Pełna szerokość */
+  box-sizing: border-box; /* Uwzględnia padding w szerokości */
+  position: relative; /* Umożliwia dodanie tła */
 }
 
-/* Zapewnienie, że h2 i h1 nie wykraczają poza kontener article */
+/* Styl dla samego article */
 article {
-  max-width: var(--layout-max-width); /* Tylko taką szerokość będzie miało article */
+  max-width: var(--layout-max-width); /* Ustawienie maksymalnej szerokości dla article */
   margin-left: auto;
   margin-right: auto;
-  padding: 0 20px; /* Opcjonalne, aby dodać odstęp do wewnątrz article */
+  padding: 0 20px; /* Opcjonalne paddingi, by zachować odstęp od krawędzi */
 }
 
-/* Dodaj responsywność dla h1 i h2 w przypadku, gdy tekst zawiera więcej wierszy */
+/* Styl dla h2 i h1, żeby pozostały wyrównane do lewej strony */
 article h2, article h1 {
-  min-height: auto; /* Możliwość automatycznego dopasowania wysokości */
-  height: auto; /* Pozwól, aby wysokość elementów rosła w zależności od zawartości */
-  padding: 20px 0; /* Możesz dodać więcej przestrzeni wokół tekstu, by zwiększyć wysokość */
+  text-align: left; /* Ustawienie tekstu do lewej */
+  width: 100%; /* Ustawienie szerokości na 100%, by pasowało do szerokości pozostałych elementów */
+}
+
+/* Styl dla kontenera w którym znajdują się inne elementy */
+article > div {
+  display: block; /* Wyświetla jako blok, obejmując cały dostępny obszar */
+  width: 100vw; /* Cała szerokość ekranu */
+  padding-left: var(--layout-margin-left); /* Ustawienie marginesu lewego, który pasuje do pozostałych elementów w article */
+  padding-right: var(--layout-margin-right); /* Opcjonalne */
 }
