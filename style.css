@@ -1,4 +1,8 @@
 /* VARIABLES */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap'); /*NOWE*/
+
+
 :root {
   --select-highlight-color: rgba(253, 215, 99, .4);
   --color-checkbox-bg: #888888 !important;
@@ -29,9 +33,18 @@
   --color-ui-hover-bg: #F2F2F2 !important;
 }
 
+h1, h2, h3 {
+  font-family: 'Manrope', var(--primary-font), sans-serif !important; /*NOWE*/
+}
+
 /* OPTIONS */
+
 #page-index .notion-header {
-  display: none !important;
+  /* display: none !important; */ /*ZMIANA*/
+}
+
+.notion-header__content {
+  display: none !important; /*ZMIANA*/
 }
 
 .theme-dark .notion-code code {
@@ -90,7 +103,7 @@ strong h1.notion-heading {
   margin-bottom: 12px !important;
   letter-spacing: -2px !important; /* ZMIANA z -4px */
   line-height: 1 !important;
-  font-size: clamp(2.6rem, 6vw, 3rem) !important; /* ZMIEONE wczesniej max rozmiar h1 byl 5 rem */
+  font-size: clamp(2.6rem, 6vw, 3rem) !important; /* ZMIANA wczesniej max rozmiar h1 byl 5 rem */
 }
 
 
