@@ -38,39 +38,6 @@ h1, h2, h3 {
 }
 
 
-
-/*NEW aby tlo bylo wspolne dla pierwszego h2 i h1, rozciagalo sie na pelna szerokosc i bylo nad pozostala czescia article*/
-article {
-  position: relative; /* Ustawienie kontekstu pozycji dla pseudo-elementów */
-}
-
-article > h2:first-of-type,
-article > h2:first-of-type + h1 {
-  position: relative; /* Zachowujemy ich normalny kontekst */
-  z-index: 1; /* Gwarancja, że tekst jest nad pseudo-elementem */
-  background: none; /* Usuń indywidualne tła */
-}
-
-article > h2:first-of-type::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: calc(100% + 1.5em); /* Dopasuj do wysokości h2 i h1 */
-  transform: translateX(-50vw + 50%); /* Rozciągnięcie tła na całą szerokość */
-  width: 100vw; /* Tło na pełną szerokość okna przeglądarki */
-  background-image: url('images/test1.jpg'); /* Ścieżka do obrazka */
-  background-size: cover; /* Dopasowanie tła */
-  background-repeat: no-repeat; /* Wyłączenie powtarzania */
-  z-index: 0; /* Umieszcza tło za tekstem */
-}
-
-
-/*NEW*/
-
-
-
 /* OPTIONS */
 
 #page-index .notion-header {
