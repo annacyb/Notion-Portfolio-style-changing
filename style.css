@@ -44,6 +44,11 @@ h1, h2, h3 {
   display: none !important; /*ZMIANA*/
 }
 
+/*ZMIENIC!! tylko dla strony z konkretnym tytulem*/
+.notion-header__cover {
+  display: none !important; /*ZMIANA*/
+}
+
 .theme-dark .notion-code code {
   color: var(--color-text-default) !important;
 }
@@ -613,6 +618,12 @@ notion-collection-card gallery
   opacity: 1 !important;
 }
 
+/*NOWE do tego aby bg color na cala szerokosc, tekst mniejszy */
+.notion-root {
+  padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
 /* FOOTER */
 .super-footer {
   border-top: 1px solid var(--color-border-default) !important;
@@ -952,4 +963,51 @@ notion-collection-card gallery
   padding-left: 24px !important;
   letter-spacing: -.3px !important;
   border-color: var(--color-border-default) !important;
+}
+
+
+/*NOWE aby bylo mozliwe dodac bg color na elementy article na pelna szerokosc, gdzie te elementy beda mialy max-width i responsywnie sie zachowywac */
+article > * {
+  background-color: yellow !important; /* Tło */
+  max-width: 100% !important;       /* Pełna szerokość dla responsywności */
+  box-sizing: border-box !important; /* Uwzględnia padding w szerokości */
+  /* color: white !important;          Tekst */
+  padding-left: calc((100vw - 1008px) / 2); /* Domyślne wyśrodkowanie treści */
+  padding-right: calc((100vw - 1008px) / 2); /* Domyślne wyśrodkowanie treści */
+  margin-bottom: 100px !important;
+}
+
+@media (max-width: 1518px) and (min-width: 1100px) {
+  article > * {
+      padding-left: calc((100vw - 908px) / 2); /* Wyśrodkowanie dla średnich ekranów */
+      padding-right: calc((100vw - 908px) / 2);
+  }
+}
+
+@media (max-width: 1099px) and (min-width: 800px) {
+  article > * {
+      padding-left: calc((100vw - 808px) / 2); /* Wyśrodkowanie dla mniejszych ekranów */
+      padding-right: calc((100vw - 808px) / 2);
+  }
+}
+
+@media (max-width: 799px) and (min-width: 600px) {
+  article > * {
+      padding-left: calc((100vw - 608px) / 2); /* Wyśrodkowanie dla małych ekranów */
+      padding-right: calc((100vw - 608px) / 2);
+  }
+}
+
+@media (max-width: 599px) and (min-width: 400px) {
+  article > * {
+      padding-left: calc((100vw - 408px) / 2); /* Wyśrodkowanie dla bardzo małych ekranów */
+      padding-right: calc((100vw - 408px) / 2);
+  }
+}
+
+@media (max-width: 399px) {
+  article > * {
+      padding-left: calc((100vw - 252px) / 2); /* Minimalne marginesy */
+      padding-right: calc((100vw - 252px) / 2);
+  }
 }
