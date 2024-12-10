@@ -2,6 +2,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap'); /*NOWE*/
 
+html {
+  font-size: 17px !important; /*ZMIANA*/
+}
+
+h1 {
+  font-size: 1.7em !important; /*ZMIANA*/
+}
+
+h2 {
+  font-size: 1.4em !important; /*ZMIANA*/
+}
+
+h3 {
+  font-size: 1.2em !important; /*ZMIANA*/
+}
+
 
 :root {
   --select-highlight-color: rgba(253, 215, 99, .4);
