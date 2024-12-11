@@ -464,6 +464,12 @@ notion-collection-card gallery
   font-weight: 200 !important;
 }
 
+/*SPR ZMIANA dla maila w kolumnie pierwszej aby byl szary*/
+p#block-152eea257338807895a7c79f625a2305 {
+  color: #6E6E6E !important; /*ZMIANA*/
+  filter: contrast(0.5) !important; /*ZMIANA*/
+}
+
 /*SPR czy w toggle zmienia sie kolor tekstu czas trwania pracy*/
 .notion-text .color-gray .notion-text__content .notion-semantic-string {
   color: red !important; /*ZMIANA*/
