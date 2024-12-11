@@ -2,20 +2,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap'); /*NOWE*/
 
-html {
-  font-size: 17px !important; /*ZMIANA*/
+
+/*ZMIANA*/
+/* html {
+  font-size: 17px !important;
 }
 
 h1 {
-  font-size: 1.7em !important; /*ZMIANA*/
+  font-size: 1.7em !important;
 }
 
 h2 {
-  font-size: 1.4em !important; /*ZMIANA*/
+  font-size: 1.4em !important;
 }
 
 h3 {
-  font-size: 1.2em !important; /*ZMIANA*/
+  font-size: 1.2em !important;
+} */
+
+.notion-toggle__summary h3{
+  font-size: 1.17em !important;
 }
 
 
@@ -157,8 +163,14 @@ h3.notion-heading * {
 }
 
 .notion-button__content {
-  weight: 300 !important; /* ZMIANA */
-  border: 1px solid #747474 !important; /* ZMIANA */
+  font-weight: 200 !important; /* ZMIANA */
+  border: 1px solid #919191 !important; /* ZMIANA */
+  font-size: 16px !important; /*ZMIANA*/
+}
+
+.notion-button__content:hover {
+  background-color: #efefef !important; /*ZMIANA*/
+  color: #252525 !important; /*ZMIANA*/
 }
 
 
@@ -238,7 +250,7 @@ h3.notion-heading * {
     line-height: 1.3 !important; /* ZMIANA */
     font-size: 1rem !important; /* ZMIANA */
     opacity: 0.95 !important; /* ZMIANA */
-    font-weight: 600; /*ZMIANA */
+    font-weight: 500 !important; /*ZMIANA */
 }
 
 notion-collection-card gallery 
@@ -452,6 +464,11 @@ notion-collection-card gallery
   font-weight: 200 !important;
 }
 
+/*SPR czy w toggle zmienia sie kolor tekstu czas trwania pracy*/
+.notion-text .color-gray .notion-text__content .notion-semantic-string {
+  color: red !important; /*ZMIANA*/
+}
+
 .notion-collection-card__property-list {
   margin-top: 0 !important;
 }
@@ -498,7 +515,7 @@ notion-collection-card gallery
   background: white !important; /*ZMIANA*/
   /* border: 1px solid var(--color-border-default); */
   border: 1px solid #dbdbdb !important; /*ZMIANA*/ 
-  color: #4e4e4e !important; /*ZMIANA*/
+  /* color: #4e4e4e !important; */ /*ZMIANA*/
 }
 
 .notion-callout {
@@ -513,6 +530,10 @@ notion-collection-card gallery
 
 .notion-semantic-string .link {
     text-decoration: none !important; /* ZMIANA */
+}
+
+.notion-semantic-string .link:hover {
+  text-decoration: none !important; /* ZMIANA */
 }
 
 .notion-link link {
@@ -558,7 +579,7 @@ notion-collection-card gallery
 .notion-collection-card__property-list {
   display: flex !important;
   flex-direction: column !important;
-  gap: 8px !important; /*ZMIANA */
+  gap: 6px !important; /*ZMIANA */
 }
 
 .notion-property__date .date {
@@ -657,7 +678,7 @@ notion-collection-card gallery
 .notion-toggle {
   border: 1px solid var(--color-border-default) !important;
   border-radius: 8px !important;
-  margin-bottom: 16px !important;
+  margin-bottom: 8px !important; /*ZMIANA*/
   position: relative !important;
   text-align: left !important;
   transition: all .3s ease-in-out !important;
@@ -670,17 +691,33 @@ notion-collection-card gallery
   padding-right: 30px !important;
 }
 
+/*NOWE aby headingi toggle byly jasniejsze, chudsze*/
+.notion-toggle__summary h3 span strong {
+  font-weight: 500 !important; /*ZMIANA*/
+  color: #3c3c3c !important; /*ZMIANA*/
+  font-family: var(--primary-font), sans-serif !important; /*ZMIANA*/
+  letter-spacing: 0.1px !important; /*ZMIANA*/
+}
+
+
+
 .notion-heading.toggle {
   padding: 0px !important;
 }
 
 .notion-toggle.open {
-  background: var(--color-ui-hover-bg) !important;
+  /* background: var(--color-ui-hover-bg) !important;  */
+  background: rgb(253 253 253) !important; /*ZMIANA*/
   padding-bottom: 16px !important;
 }
 
 .notion-toggle.open .notion-toggle__content {
   border-top: 1px solid var(--color-border-default) !important;
+}
+
+/*SPR czy dziala ze dlugosc pracy/studiow w toggles zmienia kolor*/
+.notion-toggle__content p.notion-text.color-gray.notion-text__content.notion-semantic-string {
+  color: purple !important; /*NOWE*/
 }
 
 .notion-toggle__content {
@@ -700,7 +737,7 @@ notion-collection-card gallery
 }
 
 .notion-toggle:hover {
-  background: var(--color-ui-hover-bg) !important;
+  background: var(--color-ui-hover-bg); /*ZMIANA usuniecie important*/
 }
 
 .notion-toggle:before {
