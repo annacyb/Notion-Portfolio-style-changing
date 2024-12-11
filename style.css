@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap'); /*NOWE*/
 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@100&display=swap');
 
 /*ZMIANA*/
 /* html {
@@ -19,10 +20,6 @@ h2 {
 h3 {
   font-size: 1.2em !important;
 } */
-
-.notion-toggle__summary h3{
-  font-size: 1.17em !important;
-}
 
 
 :root {
@@ -55,9 +52,35 @@ h3 {
   --color-ui-hover-bg: #F2F2F2 !important;
 }
 
-h1, h2, h3 {
+h1 {
   font-family: 'Manrope', var(--primary-font), sans-serif !important; /*NOWE*/
 }
+
+h2 {
+  font-weight: 500 !important; /*ZMIANA*/
+}
+
+.notion-toggle__summary h3{
+  font-size: 1.17em !important;
+}
+
+.notion-semantic-string {
+  line-height: 1.4rem; /*ZMIANA lista punktowana mniejsze odleglosci*/
+}
+
+
+.notion-bulleted-list {
+  max-width: 550px !important; /*:ZMIANA*/
+}
+
+.notion-toggle-content {
+  margin: 0px 20px 0px 20px !important; /*ZMIANA*/
+}
+
+.notion-toggle-summary {
+  padding: 20px !important; /*ZMIANA*/
+}
+
 
 /* OPTIONS */
 
@@ -133,12 +156,17 @@ strong h1.notion-heading {
 
 h1.notion-heading {
   letter-spacing: -1px!important;
-  font-size: 3rem !important; /* ZMIANA */
+  font-size: 2.8rem !important; /* ZMIANA */
 }
 
 /*ZMIENIC!! tylko dla strony z konkretnym tytulem*/
 h1.notion-heading:first-of-type {
-  margin-top: -0.3rem !important; /*ZMIANA*/
+  margin-top: 0.2rem !important; /*ZMIANA*/
+}
+
+/*ZMIENIC!! tylko dla strony z konkretnym tytulem*/
+h2.notion-heading:first-of-type {
+  font-size: var(--heading2-size);
 }
 
 h2.notion-heading:not(.toggle) {
@@ -148,6 +176,7 @@ h2.notion-heading:not(.toggle) {
 h2.notion-heading * {
   letter-spacing: -1px !important;
   line-height: 1 !important;
+  font-size: calc(var(--heading2-size) - 4px) !important; /*ZMIANA*/
 }
 
 h3.notion-heading * {
@@ -248,13 +277,10 @@ h3.notion-heading * {
 
 .notion-collection-card .notion-property__title {
     line-height: 1.3 !important; /* ZMIANA */
-    font-size: 1rem !important; /* ZMIANA */
+    font-size: 1.1rem !important; /* ZMIANA */
     opacity: 0.95 !important; /* ZMIANA */
     font-weight: 500 !important; /*ZMIANA */
 }
-
-notion-collection-card gallery 
-
 
 
 /* MEDIUM */
@@ -381,7 +407,8 @@ notion-collection-card gallery
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0)
+  -moz-transform: translate3d(0, 0, 0);
+  background: rgb(253 253 253) !important /*ZMIANA*/
 }
 
 .notion-collection-card:hover {
@@ -464,15 +491,10 @@ notion-collection-card gallery
   font-weight: 200 !important;
 }
 
-/*SPR ZMIANA dla maila w kolumnie pierwszej aby byl szary*/
+/*ZMIANA dla maila w kolumnie pierwszej aby byl szary*/
 p#block-152eea257338807895a7c79f625a2305 {
   color: #6E6E6E !important; /*ZMIANA*/
   filter: contrast(0.5) !important; /*ZMIANA*/
-}
-
-/*SPR czy w toggle zmienia sie kolor tekstu czas trwania pracy*/
-.notion-text .color-gray .notion-text__content .notion-semantic-string {
-  color: red !important; /*ZMIANA*/
 }
 
 .notion-collection-card__property-list {
@@ -518,7 +540,7 @@ p#block-152eea257338807895a7c79f625a2305 {
 
 .notion-pill.pill-gray {
   /* background: var(--color-bg-default) !important; */
-  background: white !important; /*ZMIANA*/
+  background: rgba(255, 255, 255, 0) !important; /*ZMIANA*/
   /* border: 1px solid var(--color-border-default); */
   border: 1px solid #dbdbdb !important; /*ZMIANA*/ 
   /* color: #4e4e4e !important; */ /*ZMIANA*/
@@ -682,9 +704,10 @@ p#block-152eea257338807895a7c79f625a2305 {
 
 /* TOGGLE */
 .notion-toggle {
-  border: 1px solid var(--color-border-default) !important;
+  /* border: 1px solid var(--color-border-default) !important; */
+  border: 1px solid #d6d6d6 !important; /*ZMIANA*/
   border-radius: 8px !important;
-  margin-bottom: 8px !important; /*ZMIANA*/
+  margin-bottom: 6px !important; /*ZMIANA*/
   position: relative !important;
   text-align: left !important;
   transition: all .3s ease-in-out !important;
@@ -715,15 +738,17 @@ p#block-152eea257338807895a7c79f625a2305 {
   /* background: var(--color-ui-hover-bg) !important;  */
   background: rgb(253 253 253) !important; /*ZMIANA*/
   padding-bottom: 16px !important;
+  box-shadow: 4px 4px 16px 0px rgba(240, 240, 240, 1) !important; /*NOWE*/
 }
 
 .notion-toggle.open .notion-toggle__content {
   border-top: 1px solid var(--color-border-default) !important;
 }
 
-/*SPR czy dziala ze dlugosc pracy/studiow w toggles zmienia kolor*/
+/*ZMIANA aby okresy pracy/studiów mialy inny kolor, size*/
 .notion-toggle__content p.notion-text.color-gray.notion-text__content.notion-semantic-string {
-  color: purple !important; /*NOWE*/
+  color: #686868 !important; /*ZMIANA*/
+  font-size: 16px !important;
 }
 
 .notion-toggle__content {
