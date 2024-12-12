@@ -207,8 +207,8 @@ h3.notion-heading * {
 .super-navbar {
   backdrop-filter: blur(8px) !important;
   border-bottom: 1px solid var(--color-border-default) !important;
-  background-color: white !important; /*ZMIANA*/
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.05) !important; /*NOWE*/
+  background-color: rgba(255, 255, 255, 0.5) !important; /*ZMIANA*/
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.05) !important; /*ZMIANA*/
 }
 
 .super-navbar__menu {
