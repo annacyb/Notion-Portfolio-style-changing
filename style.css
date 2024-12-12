@@ -56,11 +56,18 @@ h3 {
 
 h1 {
   font-family: 'Manrope', var(--primary-font), sans-serif !important; /*NOWE*/
+  color: #323232 !important; /*ZMIANA*/
 }
 
 h1 em {
   font-family: "Be Vietnam Pro", 'Manrope', var(--primary-font), sans-serif !important; /*NOWE*/
-  font-size: calc(2.8rem + 0.353rem) !important;
+  font-size: calc(2.8rem + 0.053rem) !important; /*NOWE*/
+  font-weight: 400 !important; /*NOWE*/
+  letter-spacing: -0.12rem !important; /*NOWE*/
+}
+
+.notion-heading {
+  font-family: 'Manrope', var(--primary-font), sans-serif !important; /*ZMIANA*/
 }
 
 h2 {
@@ -766,7 +773,7 @@ p#block-152eea257338807895a7c79f625a2305 {
   /* background: var(--color-ui-hover-bg) !important;  */
   background: rgb(253 253 253) !important; /*ZMIANA*/
   padding-bottom: 16px !important;
-  box-shadow: 4px 4px 16px 0px rgba(240, 240, 240, 1) !important; /*NOWE*/
+  box-shadow: 4px 4px 16px 0px rgba(240, 240, 240, 0.7) !important; /*NOWE*/
 }
 
 .notion-toggle.open .notion-toggle__content {
@@ -784,7 +791,7 @@ p#block-152eea257338807895a7c79f625a2305 {
   border-top: 1px solid var(--color-border-default) !important;
   margin: 0px 20px 0px 20px !important;
   padding-top: 16px !important;
-  transition: all .05s ease-in-out !important;
+  transition: all 0.5s ease-in-out !important;
 }
 
 .notion-toggle__trigger {
