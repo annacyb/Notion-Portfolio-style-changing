@@ -98,13 +98,13 @@ h2 {
 
 /* OPTIONS */
 
-/*ZMIENIC!! tylko dla strony z konkretnym tytulem*/
-.notion-header__content {
+/* HOME page only */
+main#page-index .notion-header__content {
   display: none !important; /*ZMIANA*/
 }
 
-/*ZMIENIC!! tylko dla strony z konkretnym tytulem*/
-.notion-header__cover {
+/* HOME page only */
+main#page-index .notion-header__cover {
   display: none !important; /*ZMIANA*/
 }
 
