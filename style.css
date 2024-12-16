@@ -103,9 +103,32 @@ main#page-index .notion-header__content {
   display: none !important; /*ZMIANA*/
 }
 
-/* HOME page only */
-main#page-index .notion-header__cover {
+.notion-header__icon-wrapper {
   display: none !important; /*ZMIANA*/
+}
+
+/* HOME, ABOUT, RESUME, CONTACT page only */
+main#page-index .notion-header__cover,
+main#about-moje .notion-header__cover,
+main#page-resume .notion-header__cover,
+main#page-contact .notion-header__cover {
+  display: none !important; /*ZMIANA*/
+}
+
+.notion-header__content {
+  height: 25vh !important; /*ZMIANA*/
+}
+
+/*zeby na duzych ekranach cover byl na srodku a nie rozszerzony bardzo na cala szerokosc*/
+.notion-header__cover {
+  max-width: var(--layout-max-width) !important; /*ZMIANA*/
+  margin-left: auto !important; /*ZMIANA*/
+  margin-right: auto !important; /*ZMIANA*/
+}
+
+/*Cover img for projects*/
+.notion-header__cover img {
+  height: auto !important; /*ZMIANA*/
 }
 
 .theme-dark .notion-code code {
@@ -173,15 +196,34 @@ h1.notion-heading {
   font-size: 2.8rem !important; /* ZMIANA */
 }
 
-/*ZMIENIC!! tylko dla strony z konkretnym tytulem*/
-h1.notion-heading:first-of-type {
+/* HOME page only */
+main#page-index h1.notion-heading:first-of-type {
   margin-top: 0.2rem !important; /*ZMIANA*/
 }
 
-/*ZMIENIC!! tylko dla strony z konkretnym tytulem*/
-h2.notion-heading:first-of-type {
-  font-size: var(--heading2-size);
+/* HOME page only */
+main#page-index h2.notion-heading:first-of-type {
+  font-size: var(--heading2-size); /*ZMIANA*/
 }
+
+/* SPR NOWEEEE - subpages titles heading*/
+h1.notion-header__title {
+  font-size: 2rem !important; /*ZMIANA*/
+  font-weight: 500 !important; /*ZMIANA*/
+  font-family: 'Manrope', var(--primary-font), sans-serif !important; /*ZMIANA*/
+  letter-spacing: -1px!important; /*ZMIANA*/
+  line-height: 1.3em; /*ZMIANA*/
+  color: #323232 !important; /*ZMIANA*/
+  margin-top: 0px !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1.5rem !important; /*ZMIANA*/
+}
+
+.notion-header__content .notion-header__title-wrapper {
+  margin-top: 2.5rem !important; /*ZMIANA*/
+  margin-bottom: 1.5rem !important; /*ZMIANA*/
+}
+
 
 h2.notion-heading:not(.toggle) {
   margin-bottom: 12px !important;
@@ -198,12 +240,12 @@ h3.notion-heading * {
   line-height: 1 !important;
 }
 
-.notion-header__title {
+/* .notion-header__title {
   font-size: clamp(2.3rem, 5vw, 3rem) !important;
   line-height: 1.1 !important;
   letter-spacing: -1.6px !important;
   opacity: var(--header-title-opacity)!important;
-}
+} */
 
 .notion-button__content {
   font-weight: 200 !important; /* ZMIANA */
@@ -214,6 +256,10 @@ h3.notion-heading * {
 .notion-button__content:hover {
   background-color: #efefef !important; /*ZMIANA*/
   color: #252525 !important; /*ZMIANA*/
+}
+
+#block-root-divider {
+  color: #323232 !important; /*ZMIANA*/
 }
 
 
@@ -258,6 +304,14 @@ h3.notion-heading * {
 
 .super-navbar__theme-toggle svg {
   stroke-width: 1.5px !important;
+}
+
+.super-navbar__breadcrumbs {
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.05) !important; /*ZMIANA*/
+}
+
+.super-navbar__breadcrumbs .notion-breadcrumb a {
+  color: #1a1a1a !important; /*ZMIANA*/
 }
 
 /* HEADER */
