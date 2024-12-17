@@ -6,23 +6,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@100&display=swap'); /*NOWE*/
 
-/*ZMIANA*/
-/* html {
-  font-size: 17px !important;
-}
-
-h1 {
-  font-size: 1.7em !important;
-}
-
-h2 {
-  font-size: 1.4em !important;
-}
-
-h3 {
-  font-size: 1.2em !important;
-} */
-
 
 :root {
   --select-highlight-color: rgba(253, 215, 99, .4);
@@ -74,6 +57,11 @@ h2 {
   font-weight: 500 !important; /*ZMIANA*/
 }
 
+/* p text */
+.notion-text__content {
+  padding: 3px 2px 5px 2px !important; /*ZMIANA*/
+}
+
 .notion-toggle__summary h3{
   font-size: 1.17em !important;
 }
@@ -109,21 +97,22 @@ main#page-index .notion-header__content {
 
 /* HOME, ABOUT, RESUME, CONTACT page only */
 main#page-index .notion-header__cover,
-main#about-moje .notion-header__cover,
+main#page-about-moje .notion-header__cover,
 main#page-resume .notion-header__cover,
 main#page-contact .notion-header__cover {
   display: none !important; /*ZMIANA*/
 }
 
-.notion-header__content {
+/* .notion-header__content {
   height: 25vh !important; /*ZMIANA*/
-}
+} */
 
 /*zeby na duzych ekranach cover byl na srodku a nie rozszerzony bardzo na cala szerokosc*/
 .notion-header__cover {
   max-width: var(--layout-max-width) !important; /*ZMIANA*/
   margin-left: auto !important; /*ZMIANA*/
   margin-right: auto !important; /*ZMIANA*/
+  height: 35vh !important; /*ZMIANA*/
 }
 
 /*Cover img for projects*/
@@ -181,6 +170,10 @@ body {
   margin-bottom: 12px !important;
 }
 
+.notion-text strong {
+  color: #1b1b1b !important; /*ZMIANA*/
+}
+
 /* XL H1 */
 h1.notion-heading strong,
 strong h1.notion-heading {
@@ -206,7 +199,6 @@ main#page-index h2.notion-heading:first-of-type {
   font-size: var(--heading2-size); /*ZMIANA*/
 }
 
-/* SPR NOWEEEE - subpages titles heading*/
 h1.notion-header__title {
   font-size: 2rem !important; /*ZMIANA*/
   font-weight: 500 !important; /*ZMIANA*/
@@ -227,17 +219,37 @@ h1.notion-header__title {
 
 h2.notion-heading:not(.toggle) {
   margin-bottom: 12px !important;
+  margin-top: 1.5rem !important; /*ZMIANA*/
 }
 
 h2.notion-heading * {
   letter-spacing: -1px !important;
   line-height: 1 !important;
   font-size: calc(var(--heading2-size) - 4px) !important; /*ZMIANA*/
+  color: #1b1b1b !important; /*ZMIANA*/
 }
 
 h3.notion-heading * {
-  letter-spacing: -.6px !important;
+  letter-spacing: -0.01rem !important; /*ZMIANA*/
   line-height: 1 !important;
+  font-size: calc(var(--heading3-size) - 4px) !important; /*ZMIANA*/
+  margin-top: 1.5rem !important; /*ZMIANA*/
+  padding-bottom: 0.6rem !important; /*ZMIANA*/
+  color: #1b1b1b !important; /*ZMIANA*/
+}
+
+ol li strong,
+ol li::marker,
+ul li strong,
+ul li::marker
+ {
+  color: #1b1b1b !important; /*ZMIANA*/
+}
+
+h1 span strong,
+h2 span strong,
+h3 span strong {
+  color: #1b1b1b !important; /*ZMIANA*/
 }
 
 /* .notion-header__title {
@@ -319,6 +331,12 @@ h3.notion-heading * {
   margin-bottom: 0px!important;
 }
 
+/* BLOCKQUOTE */
+.notion-quote {
+  letter
+}
+
+
 /* GALLERY */
 
 .notion-collection__header-wrapper {
@@ -351,6 +369,13 @@ h3.notion-heading * {
     font-size: 1rem !important; /* ZMIANA */
     opacity: 0.95 !important; /* ZMIANA */
     font-weight: 500 !important; /*ZMIANA */
+    color: #1b1b1b !important; /*ZMIANA*/
+}
+
+.notion-column p.notion-text.color-default.notion-text__content.notion-semantic-string,
+.notion-column p.notion-text.color-default.notion-text__content.notion-semantic-string span,
+.notion-column p.notion-text.notion-text__content.notion-semantic-string {
+  color: #1b1b1b !important; /*ZMIANA*/
 }
 
 .notion-collection-card .notion-property__title .notion-property__title__icon-wrapper {
@@ -1125,10 +1150,12 @@ p#block-152eea257338807895a7c79f625a2305 {
 }
 
 .notion-quote {
-  line-height: 1.4 !important;
+  /* line-height: 1.4 !important; */
   margin-bottom: 24px !important;
   margin-top: 25px !important;
   padding-left: 24px !important;
-  letter-spacing: -.3px !important;
+  /* letter-spacing: -.3px !important; */
   border-color: var(--color-border-default) !important;
+  font-size: 17px !important; /*ZMIANA*/
+  font-family: var(--secondary-font) !important; /*ZMIANA*/
 }
