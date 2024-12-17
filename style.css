@@ -59,7 +59,7 @@ h2 {
 
 /* p text */
 .notion-text__content {
-  padding: 3px 2px 5px 2px !important; /*ZMIANA*/
+  padding: 6px 2px 6px 2px !important; /*ZMIANA*/
 }
 
 .notion-toggle__summary h3{
@@ -111,7 +111,7 @@ main#page-contact .notion-header__cover {
   max-width: var(--layout-max-width) !important; /*ZMIANA*/
   margin-left: auto !important; /*ZMIANA*/
   margin-right: auto !important; /*ZMIANA*/
-  height: 35vh !important; /*ZMIANA*/
+  height: 30vh !important; /*ZMIANA*/
 }
 
 /*Cover img for projects*/
@@ -200,10 +200,10 @@ main#page-index h2.notion-heading span strong:first-of-type {
 }
 
 h1.notion-header__title {
-  font-size: 2rem !important; /*ZMIANA*/
+  font-size: 1.8rem !important; /*ZMIANA*/
   font-weight: 500 !important; /*ZMIANA*/
   font-family: 'Manrope', var(--primary-font), sans-serif !important; /*ZMIANA*/
-  letter-spacing: -1px!important; /*ZMIANA*/
+  letter-spacing: -0.5px !important; /*ZMIANA*/
   line-height: 1.3em; /*ZMIANA*/
   color: #323232 !important; /*ZMIANA*/
   margin-top: 0px !important;
@@ -222,9 +222,9 @@ h2.notion-heading:not(.color-grey):not(.color-red):not(.toggle),
 h2.notion-heading span:not(.color-grey):not(.color-red):not(.toggle) {
   margin-bottom: 12px !important;
   margin-top: 1.5rem !important; /*ZMIANA*/
-  letter-spacing: -1px !important;
+  letter-spacing: -0.5px !important;
   line-height: 1 !important;
-  font-size: calc(var(--heading2-size) - 0px) !important; /*ZMIANA*/
+  font-size: calc(var(--heading2-size) - 0.1rem) !important; /*ZMIANA*/
   color: #1b1b1b !important; /*ZMIANA*/
 }
 
@@ -233,15 +233,15 @@ h3.notion-heading span:not(.color-grey):not(.color-red):not(.toggle) {
   letter-spacing: -0.01rem !important; /*ZMIANA*/
   line-height: 1 !important;
   font-size: calc(var(--heading3-size) - 4px) !important; /*ZMIANA*/
-  margin-top: 1.5rem !important; /*ZMIANA*/
+  margin-top: 1.3rem !important; /*ZMIANA*/
   padding-bottom: 0.6rem !important; /*ZMIANA*/
   color: #1b1b1b !important; /*ZMIANA*/
 }
 
-ol li strong:not(.color-grey):not(.color-red),
-ol li::marker:not(.color-grey):not(.color-red),
-ul li strong:not(.color-grey):not(.color-red),
-ul li::marker:not(.color-grey):not(.color-red)
+ol.notion-numbered-list li strong:not(.color-grey):not(.color-red),
+ol.notion-numbered-list::marker:not(.color-grey):not(.color-red),
+ul.notion-bulleted-list li strong:not(.color-grey):not(.color-red),
+ul.notion-bulleted-list li::marker:not(.color-grey):not(.color-red)
  {
   color: #1b1b1b !important; /*ZMIANA*/
 }
@@ -366,7 +366,7 @@ h3 span strong:not(.color-grey):not(.color-red) {
   /* letter-spacing: -.3px !important; */
   border-color: var(--color-border-default) !important;
   font-size: 17px !important; /*ZMIANA*/
-  font-family: var(--secondary-font) !important; /*ZMIANA*/
+  font-family: var(--secondary-font) !important; /*ZMIANA*/;
 }
 
 
@@ -387,7 +387,11 @@ h3 span strong:not(.color-grey):not(.color-red) {
 
 .notion-column p.notion-text.color-default.notion-text__content.notion-semantic-string:not(.color-grey):not(.color-red),
 .notion-column p.notion-text.color-default.notion-text__content.notion-semantic-string span:not(.color-grey):not(.color-red),
-.notion-column p.notion-text.notion-text__content.notion-semantic-string:not(.color-grey):not(.color-red) {
+.notion-column p.notion-text.notion-text__content.notion-semantic-string strong:not(.color-grey):not(.color-red) {
+  color: #1b1b1b !important; /*ZMIANA*/
+}
+
+.notion-quote span strong {
   color: #1b1b1b !important; /*ZMIANA*/
 }
 
@@ -631,7 +635,7 @@ p#block-152eea257338807895a7c79f625a2305 {
 }
 
 .notion-property__text {
-  font-size: 14px !important;
+  font-size: 16px !important; /*ZMIANA*/
   font-weight: 300 !important;
 }
 
