@@ -104,8 +104,7 @@ main#page-contact .notion-header__cover {
 }
 
 /* .notion-header__content {
-  height: 25vh !important; /*ZMIANA*/
-*/
+  height: 25vh !important; ZMIANA*/
 
 /*zeby na duzych ekranach cover byl na srodku a nie rozszerzony bardzo na cala szerokosc*/
 .notion-header__cover {
