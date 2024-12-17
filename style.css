@@ -332,11 +332,6 @@ h3 span strong:not(.color-grey) {
   margin-bottom: 0px!important;
 }
 
-/* BLOCKQUOTE */
-.notion-quote {
-  letter
-}
-
 
 /* GALLERY */
 
@@ -357,6 +352,20 @@ h3 span strong:not(.color-grey) {
     border-radius: 12px !important;
     transition: all 0.5 ease-in-out !important; /*SPR NOWE*/
 }
+
+
+/* QUOTE */
+.notion-quote {
+  /* line-height: 1.4 !important; */
+  margin-bottom: 24px !important;
+  margin-top: 25px !important;
+  padding-left: 24px !important;
+  /* letter-spacing: -.3px !important; */
+  border-color: var(--color-border-default) !important;
+  font-size: 17px !important; /*ZMIANA*/
+  font-family: var(--secondary-font) !important; /*ZMIANA*/
+}
+
 
 /* ZMIANA z 754px */
 @media all and (max-width: 1100px) { 
@@ -1150,13 +1159,3 @@ p#block-152eea257338807895a7c79f625a2305 {
   cursor: pointer !important;
 }
 
-.notion-quote {
-  /* line-height: 1.4 !important; */
-  margin-bottom: 24px !important;
-  margin-top: 25px !important;
-  padding-left: 24px !important;
-  /* letter-spacing: -.3px !important; */
-  border-color: var(--color-border-default) !important;
-  font-size: 17px !important; /*ZMIANA*/
-  font-family: var(--secondary-font) !important; /*ZMIANA*/
-}
