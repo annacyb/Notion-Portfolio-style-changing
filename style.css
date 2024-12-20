@@ -676,6 +676,10 @@ p#block-152eea257338807895a7c79f625a2305 {
     border-radius: 12px !important; /*ZMIANA */
 }
 
+.notion.callout.border {
+  box-shadow: 2px 2px 12px 0px rgba(240, 240, 240, 1); /*NOWE*/
+}
+
 .notion-callout__icon {
     top:3px !important; /* ZMIANA */
     width: auto !important; /* ZMIANA */
@@ -693,6 +697,24 @@ p#block-152eea257338807895a7c79f625a2305 {
     border-radius: 12px !important;
 }
 
+/*ZDJECIA jako pills w konkretnym container w Caseflow, sekcji My role - w Callout element, ulozone obok siebie*/
+
+/*Container na pills z elementami w My Role*/
+
+#162eea25-7338-80ab-b74c-e200978bc9db div div {
+  border: 0px !important;
+  padding: 0px !important;
+  box-shadow: none !important; /*NOWE*/
+}
+  
+/*Bezposredni container z elementami pills w my role*/
+#162eea25-7338-80ab-b74c-e200978bc9db div div div {
+  display: row !important;
+  flex-wrap: wrap !important;
+  gap: 8px 24px !important; /*przerwa w pionie i w poziomie miedzy elementami*/
+  margin-left: 0px !important;
+}
+    
 
 
 /* LIST */
