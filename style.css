@@ -701,20 +701,20 @@ p#block-152eea257338807895a7c79f625a2305 {
 
 /*Container na pills z elementami w My Role*/
 
-#162eea25-7338-80ab-b74c-e200978bc9db div div {
+#block-162eea25733880abb74ce200978bc9db {
   border: 0px !important;
   padding: 0px !important;
+  margin: 0px !important;
   box-shadow: none !important; /*NOWE*/
 }
   
 /*Bezposredni container z elementami pills w my role*/
-#162eea25-7338-80ab-b74c-e200978bc9db div div div {
-  display: row !important;
+#block-162eea25733880abb74ce200978bc9db div {
+  flex-direction: row !important;
   flex-wrap: wrap !important;
-  gap: 8px 24px !important; /*przerwa w pionie i w poziomie miedzy elementami*/
+  gap: 6px 6px !important; /*przerwa w pionie i w poziomie miedzy elementami*/
   margin-left: 0px !important;
 }
-    
 
 
 /* LIST */
