@@ -37,6 +37,14 @@
   --color-ui-hover-bg: #F2F2F2 !important;
 }
 
+.color-green {
+  color: #53773F !important; /*ZMIANA*/
+}
+
+.color-yellow {
+  color: #F5C665 !important; /*ZMIANA*/
+}
+
 h1 {
   font-family: 'Manrope', var(--primary-font), sans-serif !important; /*NOWE*/
   color: #323232 !important; /*ZMIANA*/
@@ -44,7 +52,7 @@ h1 {
 
 h1 em {
   font-family: "Be Vietnam Pro", 'Manrope', var(--primary-font), sans-serif !important; /*NOWE*/
-  font-size: calc(2.8rem + 0.053rem) !important; /*NOWE*/
+  font-size: calc(3.1rem + 0.053rem) !important; /*NOWE*/
   font-weight: 400 !important; /*NOWE*/
   letter-spacing: -0.12rem !important; /*NOWE*/
 }
@@ -185,7 +193,7 @@ strong h1.notion-heading {
 
 h1.notion-heading {
   letter-spacing: -1px!important;
-  font-size: 2.8rem !important; /* ZMIANA */
+  font-size: 3.1rem !important; /* ZMIANA */
 }
 
 /* HOME page only */
@@ -224,7 +232,7 @@ h2.notion-heading span:not(.color-grey):not(.color-red):not(.toggle) {
   margin-top: 1.5rem !important; /*ZMIANA*/
   letter-spacing: -0.5px !important;
   line-height: 1 !important;
-  font-size: calc(var(--heading2-size) - 0.1rem) !important; /*ZMIANA*/
+  font-size: calc(var(--heading2-size) - 0rem) !important; /*ZMIANA*/
   color: #1b1b1b !important; /*ZMIANA*/
 }
 
@@ -232,7 +240,7 @@ h3.notion-heading:not(.color-grey):not(.color-red):not(.toggle),
 h3.notion-heading span:not(.color-grey):not(.color-red):not(.toggle) {
   letter-spacing: -0.01rem !important; /*ZMIANA*/
   line-height: 1 !important;
-  font-size: calc(var(--heading3-size) - 4px) !important; /*ZMIANA*/
+  font-size: calc(var(--heading3-size) - 0.1rem) !important; /*ZMIANA*/
   margin-top: 1.3rem !important; /*ZMIANA*/
   padding-bottom: 0.6rem !important; /*ZMIANA*/
   color: #1b1b1b !important; /*ZMIANA*/
@@ -676,8 +684,9 @@ p#block-152eea257338807895a7c79f625a2305 {
     border-radius: 12px !important; /*ZMIANA */
 }
 
-.notion.callout.border {
+.notion-callout.border {
   box-shadow: 2px 2px 12px 0px rgba(240, 240, 240, 1) !important; /*NOWE*/
+  border: 1px solid #d8d8d8 !important; /*ZMIANA*/
 }
 
 .notion-callout__icon {
@@ -714,6 +723,7 @@ p#block-152eea257338807895a7c79f625a2305 {
   flex-wrap: wrap !important; /*ZMIANA*/
   /* gap: 6px 6px !important; przerwa w pionie i w poziomie miedzy elementami */
   margin-left: 0px !important; /*ZMIANA*/
+  padding-bottom: 2px !important; /*ZMIANA*/
 }
 
 /*Elementy pills images*/
