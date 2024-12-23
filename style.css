@@ -62,7 +62,7 @@ h1 em {
 }
 
 h2 {
-  font-weight: 500 !important; /*ZMIANA*/
+  font-weight: 600 !important; /*ZMIANA*/
 }
 
 /* p text */
@@ -233,7 +233,7 @@ h2.notion-heading span:not(.color-grey):not(.color-red):not(.toggle) {
   letter-spacing: -0.5px !important;
   line-height: 1 !important;
   font-size: calc(var(--heading2-size) - 0rem) !important; /*ZMIANA*/
-  color: #1b1b1b !important; /*ZMIANA*/
+  color: #262626 !important; /*ZMIANA*/
 }
 
 h3.notion-heading:not(.color-grey):not(.color-red):not(.toggle),
@@ -242,7 +242,7 @@ h3.notion-heading span:not(.color-grey):not(.color-red):not(.toggle) {
   line-height: 1.3 !important;
   font-size: calc(var(--heading3-size) - 0.1rem) !important; /*ZMIANA*/
   margin-top: 1.3rem !important; /*ZMIANA*/
-  padding-bottom: 0.6rem !important; /*ZMIANA*/
+  padding-bottom: 0.5rem !important; /*ZMIANA*/
   /* color: #1b1b1b !important; */ /*ZMIANA */
 }
 
@@ -716,6 +716,9 @@ p#block-152eea257338807895a7c79f625a2305 {
   padding: 0px !important; /*ZMIANA*/
   margin: 0px !important; /*ZMIANA*/
   box-shadow: none !important; /*NOWE*/
+  border-radius: 0px !important; /*ZMIANA*/
+  padding-top: 0.4rem !important; /*NOWE*/
+  padding-bottom: 0.4rem !important; /*NOWE*/
 }
   
 /*Bezposredni container z elementami pills w my role*/
