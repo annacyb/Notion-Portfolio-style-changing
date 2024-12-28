@@ -711,7 +711,7 @@ p#block-152eea257338807895a7c79f625a2305 {
 
 /*Container na pills z elementami w My Role*/
 
-#block-162eea25733880abb74ce200978bc9db {
+#block-166eea25733881b09239c57ce09cac5a {
   border: 0px !important; /*ZMIANA*/
   padding: 0px !important; /*ZMIANA*/
   margin: 0px !important; /*ZMIANA*/
@@ -722,7 +722,7 @@ p#block-152eea257338807895a7c79f625a2305 {
 }
   
 /*Bezposredni container z elementami pills w my role*/
-#block-162eea25733880abb74ce200978bc9db div {
+#block-166eea25733881b09239c57ce09cac5a div {
   flex-direction: row !important; /*ZMIANA*/
   flex-wrap: wrap !important; /*ZMIANA*/
   /* gap: 6px 6px !important; przerwa w pionie i w poziomie miedzy elementami */
@@ -731,7 +731,7 @@ p#block-152eea257338807895a7c79f625a2305 {
 }
 
 /*Elementy pills images*/
-#block-162eea25733880abb74ce200978bc9db div div {
+#block-166eea25733881b09239c57ce09cac5a div div {
   padding-right: 6px !important; /*NOWE*/
   margin-bottom: -4px !important; /*NOWE*/
 }
